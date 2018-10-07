@@ -12,22 +12,33 @@ class KotlinMainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        launch {
+        /*launch {
             val result1 = async { uploadImageOne() }//上传第一种类型图片
             val result2 = async { uploadImageTwo() }//上传第二种类型图片
             val result3 = async { submitInfo(result1.await(), result2.await()) }//等待前两种上传结果
             val result = result3.await()//等待最后上传的结果
             runOnUiThread { Log.d("主线程",result) }
+        }*/
+        let()
+    }
+
+
+    fun let(){
+        val str: String = "Boss"
+        val result = str.let {
+            print(this) // 接收者
+            print(it) // 参数
+            69 //区间返回值
         }
+        print(result)
 
     }
 
-/*
     internal fun setMyData(something: Something?):Setting{
-        return something?.data?.setting.run {
-            this?.setSomeThing()?:Setting()
-        }
-    }*/
+        return something?.data?.setting?.run {
+            this.setSomeThing()
+        }?:Setting()
+    }
 
     /**
      * 上传第一种类型的图片
