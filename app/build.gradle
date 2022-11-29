@@ -31,7 +31,7 @@ dependencies {
     androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:1.2.61"
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:0.21'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:0.21'
 

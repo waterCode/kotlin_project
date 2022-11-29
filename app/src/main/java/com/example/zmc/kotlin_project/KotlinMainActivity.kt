@@ -34,11 +34,6 @@ class KotlinMainActivity : AppCompatActivity() {
 
     }
 
-    internal fun setMyData(something: Something?):Setting{
-        return something?.data?.setting?.run {
-            this.setSomeThing()
-        }?:Setting()
-    }
 
     /**
      * 上传第一种类型的图片
